@@ -1,6 +1,6 @@
 # Study Sprint
 
-A four-step study planner that turns one task into a focused sprint, then records completed sessions and weekly progress.
+A four-step study planner that turns one task into a focused sprint, records completed sessions, and offers a timed mini-game break.
 
 ## What it does
 
@@ -11,20 +11,22 @@ A four-step study planner that turns one task into a focused sprint, then record
 - Optionally get a five-minute heads-up and a browser notification when a sprint ends
 - Review completed sessions, this week's focus time, and your most frequent task
 - Download your session history as a CSV file
-- Save sessions and preferences locally without an account or backend
+- Take a 5- or 10-minute reward break with Flappy-ish, Crossy Road, Snack-size Racer, or Boop the Hamster
+- Return to Study Sprint from the arcade's full-screen break-end reminder
+- Save sessions, preferences, and game high scores locally without an account or backend
 
 ## Run it locally
 
-Open `index.html` in a browser. Keep the page open while a sprint is running. Browser notifications require permission, and sound may require you to start the timer or preview a tone first.
+Open `index.html` in a browser. The arcade lives in `break/index.html`; open it from Study Sprint's final progress screen with **Take a game break**. Keep the page open while a timer is running. Browser notifications require permission, and sound may require you to start the timer or preview a tone first.
 
 ## Publish it
 
-Upload `index.html`, `styles.css`, `app.js`, and this README to a GitHub repository. Enable GitHub Pages from the repository's Settings → Pages, or import the repository into Vercel to deploy it.
+Upload the full contents of this folder to the GitHub repository, including the `break` folder and its `index.html`, `styles.css`, and `app.js` files. Then enable GitHub Pages from the repository's Settings → Pages, or import the repository into Vercel. Keeping the arcade folder inside the repository makes both links work on the published site.
 
 ## Privacy
 
-Session history, preferences, and an uploaded sound are stored only in the browser's local storage. They do not sync between devices. Export a CSV if you want a separate copy of your session history.
+Session history, preferences, uploaded sound, and arcade high scores stay in the browser's local storage. They do not sync between devices. Export a CSV if you want a separate copy of your session history.
 
 ## Built with
 
-HTML, CSS, and JavaScript.
+HTML, CSS, JavaScript, and Canvas.

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7efe3">
+  <title>Little Break Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Little Break Arcade home"><span class="brand-mark">✳</span><span>little break <b>arcade</b></span></a>
+    <div class="break-clock" aria-live="polite"><span class="clock-dot"></span><span>BREAK TIME</span><strong id="clock">10:00</strong></div>
+    <button class="text-button" id="resetBreak" type="button" title="Restart your selected break">RESET ↺</button>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow"><span>✦</span> A TINY TREAT FOR YOUR BRAIN</p>
+        <h1>Study hard.<br><em>Play a little.</em></h1>
+        <p class="intro-text">You did the thing. Choose a tiny game, let your brain do a silly lap, then we’ll gently scoot you back to studying.</p>
+        <div class="start-row"><button id="startBreak" class="start-button" type="button">Start my 10-minute break <span>→</span></button><span class="start-note">The countdown starts when you tap.</span></div>
+      </div>
+      <div class="mascot-card" aria-label="A friendly smiling sun mascot">
+        <div class="sun-rays">✳</div><div class="sun-face">☻</div><div class="mascot-caption">your brain<br>on a little break</div><span class="spark spark-one">✦</span><span class="spark spark-two">✦</span>
+      </div>
+    </section>
+
+    <section class="arcade" aria-label="Mini games">
+      <div class="arcade-heading"><div><p class="eyebrow">PICK YOUR PLAYGROUND</p><h2>Four games. Zero homework.</h2></div><div class="keys-hint">⌨ <span>Keyboard-friendly fun</span></div></div>
+      <div class="game-tabs" role="tablist" aria-label="Choose a game">
+        <button class="game-tab active" role="tab" aria-selected="true" data-game="flap"><span class="tab-emoji">🐤</span><span><b>Flappy-ish</b><small>Boing through the sky</small></span><span class="tab-arrow">↗</span></button>
+        <button class="game-tab" role="tab" aria-selected="false" data-game="cross"><span class="tab-emoji">🐸</span><span><b>Crossy Road</b><small>Hop to the other side</small></span><span class="tab-arrow">↗</span></button>
+        <button class="game-tab" role="tab" aria-selected="false" data-game="race"><span class="tab-emoji">🏎️</span><span><b>Snack-size Racer</b><small>Dodge the slowpokes</small></span><span class="tab-arrow">↗</span></button>
+        <button class="game-tab" role="tab" aria-selected="false" data-game="mole"><span class="tab-emoji">🐹</span><span><b>Boop the Hamster</b><small>Bonk the pop-up fluff</small></span><span class="tab-arrow">↗</span></button>
+      </div>
+      <div class="game-card">
+        <div class="game-info"><div class="game-title-line"><span id="gameIcon" class="game-icon">🐤</span><div><p class="eyebrow" id="gameKicker">SKY DEPARTMENT</p><h3 id="gameTitle">Flappy-ish</h3></div></div><p id="gameDescription" class="game-description">Tap, click, or press Space to flap. Keep your little bird airborne and your ego humble.</p><div class="game-controls"><span class="control-chip" id="controls">SPACE / TAP TO FLAP</span><span class="score-label">SCORE <b id="score">0</b></span></div><button id="playAgain" type="button" class="again-button">New round ↻</button></div>
+        <div class="game-stage"><div class="stage-top"><span id="stageLabel">ROUND 01</span><span class="live-tag"><i></i> ARCADE</span></div><canvas id="gameCanvas" width="800" height="440" aria-label="Playable mini game"></canvas><button class="tap-hint" id="tapHint" type="button">TAP TO START <span>↗</span></button><div class="stage-bottom"><span>✳ MADE FOR MINI BREAKS</span><span id="bestScore">PERSONAL BEST 0</span></div></div>
+      </div>
+      <div class="gentle-note"><span>☀</span><p><b>Friendly reminder:</b> this little arcade closes when your break time is up. Stretch, sip some water, and pick one small next step.</p></div>
+    </section>
+  </main>
+
+  <footer><span>✳ little break arcade</span><span>ONE BREAK AT A TIME · BACK TO IT WHEN THE BELL SAYS SO</span></footer>
+
+  <section id="timeUp" class="time-up" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="timeUpTitle">
+    <div class="time-up-content"><div class="end-sun">☀</div><p class="eyebrow">YOUR BREAK IS COMPLETE</p><h2 id="timeUpTitle">That’s your<br><em>break-time</em> magic.</h2><p class="end-copy">Game over, champ. Wiggle your shoulders, take a sip of water, and head back to your next little study step.</p><div class="end-stamp">YOU SHOWED UP <span>✳</span></div><a id="backToStudy" class="start-button" href="../index.html#slide-1">Start another study session <span>→</span></a></div>
+  </section>
+</body>
+</html>
